@@ -836,6 +836,29 @@ footer .rights a {
     .site-banner {
         padding: 1rem 0;
     }
+
+    .content {
+        padding: 1.6rem 1.5rem;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    section .content {
+        padding: 1.6rem 1.5rem;
+    }
+
+    .next .items {
+        padding: 0 1.5rem;
+    }
+
+    .blog .items,
+    .gallery .items {
+        padding: 0 1.5rem;
+    }
+
+    .contact .item form {
+        padding: 2rem 1.5rem;
+    }
 }
 
 @media (max-width: 400px) {
