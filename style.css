@@ -781,52 +781,101 @@ footer .rights a {
     display: none;
 }
 
-@media (max-width:700px) {
-    .icon-bars {
-        display: flex;
-        cursor: pointer;
-        justify-content: center;
-        align-items: center;
-        width: 30px;
-        height: 30px;
-        transform: rotate(90deg);
+@media (max-width: 700px) {
+    /* Navigation */
+    .nav-bar .site-logo .logo-link {
+        font-size: 18px;
     }
-
-    .icon-bars i {
-        color: #fff;
+    
+    /* Home section */
+    .home .content h1 {
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: 2px;
+    }
+    
+    .home .content h4 {
         font-size: 20px;
+        line-height: 24px;
     }
-
-    .nav-bar .navigation {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 300px;
-        height: 100vh;
-        background-color: #000;
-        list-style: none;
-        display: flex;
+    
+    /* About section */
+    .about .items .item .about-title {
+        font-size: 36px;
+    }
+    
+    .about .item-data {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Next/Destinations section */
+    .next .items {
+        gap: 2rem;
+        padding: 0 0.5rem;
+    }
+    
+    .next .items .card {
+        height: 400px;
+        margin: 0 auto;
+    }
+    
+    .next .card .content-card h4 {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+    
+    /* Gallery section */
+    .gallery .items {
+        grid-template-columns: 1fr;
+        max-height: none;
+    }
+    
+    .gallery .items .card:hover {
+        grid-column: span 1;
+    }
+    
+    /* Contact section */
+    .contact .item .row {
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1.4rem;
-        transition: all 2s;
     }
-   #bars:checked~.nav-bar .navigation {
-        position: fixed;
-        top: 0;
-        right: 0;
+    
+    .contact .item .row .card {
+        width: 100%;
     }
-
-    .site-banner .row p {
-        font-size: 50px;
-
+    
+    .contact .item form {
+        padding: 2rem 0.5rem;
     }
-
-    .site-banner .row small {
-        font-size: 20px;
-
+    
+    /* Footer */
+    footer .content h4 {
+        font-size: 32px;
+        line-height: 36px;
     }
+    
+    footer .content .navigation {
+        gap: 1rem;
+    }
+    
+    /* Fix mobile menu */
+    .nav-bar .navigation {
+        background-color: rgba(0, 4, 11, 0.95);
+        padding: 2rem;
+    }
+    
+    .icon-bars i {
+        font-size: 24px;
+    }
+}
 
-
+/* Additional breakpoint for very small screens */
+@media (max-width: 400px) {
+    .home .content h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    
+    .next .card .content-card h4 {
+        font-size: 28px;
+    }
 }
