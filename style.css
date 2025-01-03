@@ -782,100 +782,41 @@ footer .rights a {
 }
 
 @media (max-width: 700px) {
-    /* Navigation */
-    .nav-bar .site-logo .logo-link {
-        font-size: 18px;
-    }
-    
-    /* Home section */
-    .home .content h1 {
-        font-size: 32px;
-        line-height: 42px;
-        letter-spacing: 2px;
-    }
-    
-    .home .content h4 {
-        font-size: 20px;
-        line-height: 24px;
-    }
-    
-    /* About section */
-    .about .items .item .about-title {
-        font-size: 36px;
-    }
-    
-    .about .item-data {
-        grid-template-columns: 1fr;
-    }
-    
-    /* Next/Destinations section */
-    .next .items {
-        gap: 2rem;
-        padding: 0 0.5rem;
-    }
-    
-    .next .items .card {
-        height: 400px;
-        margin: 0 auto;
-    }
-    
-    .next .card .content-card h4 {
-        font-size: 32px;
-        letter-spacing: 2px;
-    }
-    
-    /* Gallery section */
-    .gallery .items {
-        grid-template-columns: 1fr;
-        max-height: none;
-    }
-    
-    .gallery .items .card:hover {
-        grid-column: span 1;
-    }
-    
-    /* Contact section */
-    .contact .item .row {
-        flex-direction: column;
-    }
-    
-    .contact .item .row .card {
-        width: 100%;
-    }
-    
-    .contact .item form {
-        padding: 2rem 0.5rem;
-    }
-    
-    /* Footer */
-    footer .content h4 {
-        font-size: 32px;
-        line-height: 36px;
-    }
-    
-    footer .content .navigation {
-        gap: 1rem;
-    }
-    
-    /* Fix mobile menu */
     .nav-bar .navigation {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
         background-color: rgba(0, 4, 11, 0.95);
-        padding: 2rem;
+        backdrop-filter: blur(10px);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        padding: 80px 20px;
+        z-index: 999;
     }
-    
-    .icon-bars i {
-        font-size: 24px;
-    }
-}
 
-/* Additional breakpoint for very small screens */
-@media (max-width: 400px) {
-    .home .content h1 {
-        font-size: 28px;
-        line-height: 36px;
+    #bars:checked ~ .nav-bar .navigation {
+        transform: translateX(0);
     }
-    
-    .next .card .content-card h4 {
-        font-size: 28px;
+
+    .icon-bars {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        cursor: pointer;
+    }
+
+    .nav-bar .navigation .link {
+        width: 100%;
+        text-align: left;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-bar .site-logo {
+        z-index: 1000;
     }
 }
